@@ -9,7 +9,7 @@
 //  </div >
 // And add it to the DOM in the .header-container component
 
-function Header(data) {
+function Header() {
     const headBod = document.createElement('div'),
         headDate  = document.createElement('span'),
         headTitle  = document.createElement('h1'),
@@ -21,9 +21,14 @@ function Header(data) {
 
     headBod.append(headDate, headTitle, headTemp);
 
-    headDate.textContent = 'March 13, 2020';
+    headDate.textContent = 'SMARCH 28, 2020';
     headTitle.textContent = 'Lambda Times';
-    headTemp.textContent = '98';
+    headTemp.textContent = '98 Degrees';
+
+    return headBod;
 }
 
 const headPlace = document.querySelector('.header-container');
+
+
+headPlace.append(Header());
